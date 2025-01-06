@@ -139,7 +139,7 @@ function validateForm() {
 
 /*======== BOOKING (VENUE SELECT) =========*/
 // Load venues from JSON file
-fetch("/data/venues.json")
+fetch("./data/venues.json")
   .then((response) => response.json())
   .then((venues) => {
       const venueSelect = document.getElementById("venue-select");
