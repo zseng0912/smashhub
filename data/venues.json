@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Apacs Badminton Centre",
+        "location": "Jln Temenggung Ahmad, Muar",
+        "image": "smashhub/assets/images/apacs.jpg",
+        "contact": "60183137025"
+    },
+    {
+        "name": "99 Apacs",
+        "location": "Jln Sakeh, Muar",
+        "image": "smashhub/assets/images/99.jpg",
+        "contact": "60183137025"
+    },
+    {
+        "name": "Golden Sport Centre",
+        "location": "Jln Ismail, Muar",
+        "image": "smashhub/assets/images/golden_sport.jpg",
+        "contact": "60183137025"
+    }
+]
