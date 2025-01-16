@@ -248,15 +248,15 @@ document.getElementById('send-btn').addEventListener('click', () => {
         const whatsappURL = `https://wa.me/${contactNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappURL, '_blank');
 
-        // Show push notification
-        if (Notification.permission === 'granted') {
-            new Notification('Booking Success!', {
-                body: 'Your booking has been successfully sent!',
-                icon: 'https://cdn-icons-png.flaticon.com/512/1038/1038097.png' // Optional: Use an icon for the notification
-            });
-        } else {
-            alert('Booking Success!');
-        }
+        // // Show push notification
+        // if (Notification.permission === 'granted') {
+        //     new Notification('Booking Success!', {
+        //         body: 'Your booking has been successfully sent!',
+        //         icon: 'https://cdn-icons-png.flaticon.com/512/1038/1038097.png' // Optional: Use an icon for the notification
+        //     });
+        // } else {
+        //     alert('Booking Success!');
+        // }
     }
 });
 
