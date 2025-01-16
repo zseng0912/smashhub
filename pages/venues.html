@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../assets/images/logo192.png" />
+
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="../assets/css/styles.css">
+        <link rel="stylesheet" href="../assets/css/venues.css">
+        <script defer src="../assets/js/header.js"></script>
+
+        <title>SmashHub</title>
+    </head>
+    <body>
+        <!--=============== HEADER ===============-->
+        <div id="navbar-placeholder"></div>
+
+        <main>
+            <!--=============== HOME ===============-->
+            <section class="container section section__height" id="venues">
+                <h2 class="section__title">Venues</h2>
+                <div id="venue-list">
+                    <!-- Venue cards will be dynamically added here -->
+                </div>
+            </section>
+        </main>
+        
+        <!--=============== JAVASCIPT ===============-->
+        <script>
+        fetch("../data/venues.json")
+            .then((response) => response.json())
+            .then((venues) => {
+                const venueList = document.getElementById("venue-list");
+
+                // Iterate through the venues and create cards
+                venues.forEach((venue) => {
+                    // Create venue card container
+                    const venueCard = document.createElement("div");
+                    venueCard.classList.add("venue-card");
+                    venueCard.setAttribute("data-venue", venue.name);
+                    venueCard.setAttribute("data-location", venue.location);
+                    venueCard.setAttribute("data-image", venue.image);
+
+                    // Add venue image
+                    venueCard.innerHTML = `
+                        <div class="venue-image">
+                            <img src="${venue.image}" alt="${venue.name}">
+                        </div>
+                        <div class="venue-info">
+                            <h2 class="venue-name">${venue.name}</h2>
+                            <p class="venue-location">${venue.location}</p>
+                            <div class="venue-actions">
+                                <button class="view-btn">View</button>
+                                <a href="booking.html?venue=${encodeURIComponent(venue.name)}" class="book-btn">Book</a>
+                            </div>
+                        </div>
+                    `;
+
+                    // Append the venue card to the list
+                    venueList.appendChild(venueCard);
+                });
+            })
+            .catch((error) => {
+                console.error("Error loading venues:", error);
+            });
+        </script>
+        <script src="../assets/js/main.js"></script>
+    </body>
+</html>

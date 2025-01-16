@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../assets/images/logo192.png" />
+
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="../assets/css/styles.css">
+        <link rel="stylesheet" href="../assets/css/venues.css">
+        <script defer src="../assets/js/header.js"></script>
+
+        <title>SmashHub</title>
+    </head>
+    <body>
+        <!--=============== HEADER ===============-->
+        <div id="navbar-placeholder"></div>
+
+        <main>
+            <!--=============== HOME ===============-->
+            <section class="container section section__height" id="booking">
+                <h2 class="section__title">Book Now</h2>
+    
+                <form id="booking-form">
+                    <label for="venue-select">Select a Venue:</label>
+                    <select id="venue-select">
+                        <option value="" disabled selected>-- Select Venue --</option>
+                    </select>
+
+                    <div id="venue-booking-info" class="venue-booking-info">
+                        <img id="venue-booking-image" class="venue-booking-image" src="" alt="Venue Image" style="display: none;">
+                        <div class="venue-booking-details">
+                            <h3 id="venue-booking-name"></h3>
+                            <p id="venue-booking-location"></p>
+                        </div>  
+                    </div>
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" required>
+                
+                    <label for="duration">Duration:</label>
+                    <div id="duration-container">
+                        <button type="button" id="duration-1" class="duration-btn">1 Hour</button>
+                        <button type="button" id="duration-2" class="duration-btn">2 Hours</button>
+                    </div>
+                
+                    <label for="section">Section:</label>
+                    <div id="section-container">
+                        <button type="button" id="evening-btn" class="section-btn">
+                            <i class="bx bx-sun"></i> Evening
+                        </button>
+                        <button type="button" id="night-btn" class="section-btn">
+                            <i class="bx bx-moon"></i> Night
+                        </button>
+                    </div>
+                
+                    <label for="time-slot">Time Slot:</label>
+                    <div id="time-slot-container">
+                        <!-- Time slots will be added here dynamically -->
+                    </div>
+                
+                    <button type="button" id="send-btn" disabled>Send</button>
+                </form>
+            </section>
+        </main>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="../assets/js/main.js"></script>
+    </body>
+</html>
