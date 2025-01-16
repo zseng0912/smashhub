@@ -292,7 +292,7 @@ body .mobile-hero {
   text-align: center;
   color: black;
   border-radius: 8px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .hero__content {
@@ -446,7 +446,7 @@ body .mobile-hero {
 
   .hero {
       text-align: center;
-      padding: 20px 0;
+      padding: 0px 0;
   }
 
   .hero__buttons {
