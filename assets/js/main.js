@@ -12,6 +12,19 @@
 //     });
 //   }
 
+/*======== SPLASH SCREEN =========*/
+document.addEventListener("DOMContentLoaded", () => {
+    // Show splash screen for 3 seconds
+    setTimeout(() => {
+      const splashScreen = document.getElementById("splash-screen");
+      const app = document.getElementById("app");
+      
+      // Hide splash screen and show the main app
+      splashScreen.style.display = "none";
+      app.style.display = "block";
+    }, 3000); // 3 seconds
+  });
+  
 /*======== NAV BAR =========*/
 // Function to add the active class to the current nav link
 function setActiveNavLink() {
