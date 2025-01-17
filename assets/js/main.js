@@ -218,16 +218,16 @@ function setVenue() {
     validateForm(); // Validate the form to enable/disable the Send button
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Ask for notification permission when the page is loaded
-    if (Notification.permission === 'default') {
-        Notification.requestPermission().then(permission => {
-            if (permission !== 'granted') {
-                alert('You have denied notification permission. Push notifications will not work.');
-            }
-        });
-    }
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     // Ask for notification permission when the page is loaded
+//     if (Notification.permission === 'default') {
+//         Notification.requestPermission().then(permission => {
+//             if (permission !== 'granted') {
+//                 alert('You have denied notification permission. Push notifications will not work.');
+//             }
+//         });
+//     }
+// });
 
 document.getElementById('send-btn').addEventListener('click', () => {
     if (selectedVenue && selectedDate && selectedDuration && selectedSection && selectedTimeSlot) {
